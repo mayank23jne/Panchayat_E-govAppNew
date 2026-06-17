@@ -121,7 +121,6 @@
 //       } else {
 //         setError(apiResponse.error || 'Failed to fetch dashboard metrics');
 //       }
-
 //         } catch (error: any) {
 //           console.error("Fetch Funds Error Log:", error);
 //           // setErrorMessage("Failed to refresh ledger data.");
@@ -183,7 +182,6 @@
 //       >
 //         {/* STATS 2X2 METRIC GRID CONTAINER */}
 //         <View className="gap-y-3 mb-6">
-
 //           {/* ROW 1: TOTAL AMOUNT & TOTAL FUNDS */}
 //           <View className="flex-row gap-x-3">
 //             {/* CARD 1: TOTAL AMOUNT */}
@@ -260,7 +258,6 @@ export default function DashboardPage() {
   // 1. Filter Context Hooks
   const [selectedYear, setSelectedYear] = useState<number>(currentYear);
   const [selectedCategory, setSelectedCategory] = useState<string>("");
-
   const [showYearDropdown, setShowYearDropdown] = useState<boolean>(false);
   const [showStatusDropdown, setShowStatusDropdown] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
@@ -301,7 +298,6 @@ export default function DashboardPage() {
       setLoading(true);
       try {
         let url = `https://panchayat.jyada.in/api/dashboard/?status=${selectedCategory}&year=${selectedYear}`;
-
         const response = await fetch(url, {
           method: "GET",
           headers: {

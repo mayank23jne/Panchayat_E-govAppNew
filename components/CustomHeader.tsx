@@ -1,7 +1,7 @@
+import { router } from "expo-router";
 import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { useAuth } from "../context/auth";
-import { router } from "expo-router";
 
 export default function CustomHeader() {
   const { user } = useAuth();
